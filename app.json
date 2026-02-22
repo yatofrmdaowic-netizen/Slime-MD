@@ -1,0 +1,109 @@
+{
+  "name": "slime-md",
+  "description": "Multi-device WhatsApp bot with Baileys, pairing web UI, and MongoDB support.",
+  "repository": "https://github.com/your-username/Slime-MD",
+  "logo": "https://raw.githubusercontent.com/WhiskeySockets/Baileys/master/Media/logo.png",
+  "keywords": [
+    "whatsapp",
+    "baileys",
+    "bot",
+    "multi-device",
+    "pairing-code"
+  ],
+  "stack": "container",
+  "env": {
+    "PAIRING_NUMBER": {
+      "description": "WhatsApp number for pairing code (country code + number, digits only).",
+      "required": true
+    },
+    "OWNER_NAME": {
+      "description": "Owner display name.",
+      "value": "Owner"
+    },
+    "OWNER_NUMBERS": {
+      "description": "Owner numbers, comma-separated (digits only).",
+      "required": true
+    },
+    "CREATOR_NUMBER": {
+      "description": "Creator contact number shown by .creator command.",
+      "required": true
+    },
+    "API_BASE_URL": {
+      "description": "External API base URL.",
+      "value": "https://api.lolhuman.xyz"
+    },
+    "API_KEY": {
+      "description": "External API key for downloader/stalker/fun features.",
+      "required": true
+    },
+    "MONGODB_URI": {
+      "description": "MongoDB connection URI for persistent settings/limits/premium.",
+      "required": false
+    },
+    "DEFAULT_LIMIT": {
+      "description": "Daily command limit for non-owner users.",
+      "value": "25"
+    },
+    "BOT_NAME": {
+      "description": "Bot display name.",
+      "value": "Slime-MD"
+    },
+    "ENABLE_PAIRING_WEB": {
+      "description": "Enable browser pairing website.",
+      "value": "true"
+    },
+    "PAIRING_WEB_TOKEN": {
+      "description": "Optional secret token for /pair endpoint.",
+      "required": false
+    },
+    "ANTI_CALL": {
+      "description": "Auto-block incoming callers.",
+      "value": "true"
+    },
+    "CALL_BLOCK": {
+      "description": "Whether blocking should occur when anti-call triggers.",
+      "value": "true"
+    },
+    "PUBLIC_MODE": {
+      "description": "Public mode for bot command usage.",
+      "value": "true"
+    },
+    "AUTO_REACT_GROUP": {
+      "description": "Auto react in groups.",
+      "value": "false"
+    },
+    "PRIVATE_MODE": {
+      "description": "Owner-only command mode.",
+      "value": "false"
+    },
+    "SAVE_STATUS": {
+      "description": "Forward viewed statuses to owner chat.",
+      "value": "false"
+    },
+    "ANTI_STATUS_DELETE": {
+      "description": "Alert owner when status deletion detected.",
+      "value": "false"
+    },
+    "ANTI_DELETE": {
+      "description": "Repost deleted messages when available.",
+      "value": "false"
+    },
+    "STICKER_PACKNAME": {
+      "description": "Sticker packname metadata.",
+      "value": "Slime-MD"
+    },
+    "STICKER_AUTHOR": {
+      "description": "Sticker author metadata.",
+      "value": "Bot"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  },
+  "scripts": {
+    "postdeploy": "npm install"
+  }
+}
