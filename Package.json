@@ -1,0 +1,24 @@
+{
+  "name": "slime-md",
+  "version": "1.0.0",
+  "description": "WhatsApp multi-device bot powered by Baileys",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "check": "node --check index.js"
+  },
+  "keywords": [
+    "whatsapp",
+    "baileys",
+    "bot",
+    "multi-device"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.7.7",
+    "pino": "^9.3.2",
+    "mongoose": "^8.10.0"
+  }
+}
